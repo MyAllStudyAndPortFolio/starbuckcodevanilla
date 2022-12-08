@@ -13,6 +13,10 @@ img{
   display: block;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* HEADER */
 
 
@@ -27,12 +31,60 @@ header .inner{
   position: relative;
   background-color: orange;
 }
-
+/*display 해서 잠시 logo 사라지게 만듬*/
 header .logo{
   height: 75px;
   position: absolute;
   top : 0;
   bottom:0;
   left : 0;
+  display: none;
   margin: auto;
+}
+/* 헤더 안에 있는 서브 메뉴*/
+header .sub_menu{
+
+}
+
+header .sub_menu ul.menu{
+  display: flex;
+}
+
+header .sub_menu ul.menu li {
+  position: relative;
+}
+header .sub_menu ul.menu li::before {
+  content : "";
+  width : 1px;
+  height : 12px;
+  background-color: black;
+  position : absolute;
+  top : 0;
+  bottom: 0;
+  margin: auto;
+}
+header .sub_menu ul.menu li:first-child::before {
+  display: none;
+}
+
+header .sub_menu ul.menu li a {
+
+  font-size : 12px;
+  padding : 11px 16px;
+  display: block;
+  color : #656565;
+}
+header .sub_menu ul.menu li a:hover {
+  color : #000;
+}
+header .sub_menu .search {
+
+}
+
+header .sub_menu .search input {
+  
+}
+
+header .sub_menu .search .material-icons {
+  
 }
